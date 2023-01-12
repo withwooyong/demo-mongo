@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
 //@DataMongoTest
 //@ExtendWith(SpringExtension.class)
 //@DirtiesContext
-@ActiveProfiles("embed")
+@ActiveProfiles("dev")
 class DemoMongoApplicationTests {
 
     @Autowired

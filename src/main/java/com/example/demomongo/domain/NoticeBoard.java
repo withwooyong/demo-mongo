@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "sp_notice_board")
+@Document(collection = "notice_board")
 public class NoticeBoard {
 
     @Id
