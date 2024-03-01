@@ -1,0 +1,31 @@
+### https://sihyung92.oopy.io/etc/intellij/2
+### PUT /api/v1/board/:id
+PUT localhost:8080/api/v1/board/1
+Content-Type: application/json
+
+
+{
+  "title": "수정된 제목",
+  "content": "수정된 내용"
+}
+
+### DELETE /api/v1/board/:id
+DELETE localhost:8080/api/v1/board/1
+
+### GET /api/v1/board/id/:id
+GET localhost:8080/api/v1/board/id/65d721bbe055ad43cddcc1cb
+Content-Type: application/json
+
+### GET /api/v1/board/title/:title
+GET localhost:8080/api/v1/board/title/title4
+Content-Type: application/json
+
+### GET /api/v1/board/content/:content
+GET localhost:8080/api/v1/board/content/content3
+Content-Type: application/json
+
+### GET /api/v1/boards
+GET localhost:8080/api/v1/boards
+Content-Type: application/json
+
+

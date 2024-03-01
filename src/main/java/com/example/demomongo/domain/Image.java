@@ -4,29 +4,28 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.time.LocalDateTime;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "board")
-public class Board {
+@Document(collection = "image")
+public class Image {
 
     @Id
     private String id;
 
-    @Indexed
-    private String title;
-    private String content;
+    private String name;
 
-//    @CreatedDate
-//    LocalDateTime createdAt;
+    @CreatedDate
+    LocalDateTime createdAt;
 
-    public Board(String title, String content) {
-        this.title = title;
-        this.content = content;
+    public Image(String name) {
+        this.name = name;
     }
 }

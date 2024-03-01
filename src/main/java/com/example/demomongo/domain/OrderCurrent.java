@@ -12,21 +12,21 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "board")
-public class Board {
+@Document(collection = "current")
+public class OrderCurrent {
 
     @Id
     private String id;
 
     @Indexed
-    private String title;
-    private String content;
+    private String name;
+    private String job;
 
 //    @CreatedDate
-//    LocalDateTime createdAt;
+//    private LocalDateTime createdAt;
 
-    public Board(String title, String content) {
-        this.title = title;
-        this.content = content;
+    public OrderCurrent(String name, String job) {
+        this.name = name;
+        this.job = job;
     }
 }

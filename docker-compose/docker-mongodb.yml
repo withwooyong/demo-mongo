@@ -9,9 +9,11 @@ services:
     volumes:
       - ./mongodb:/data/db
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=1234
+      #      - MONGO_INITDB_ROOT_USERNAME=root
+      #      - MONGO_INITDB_ROOT_PASSWORD=1234
       - MONGO_INITDB_DATABASE=mydb
     ports:
       - "27017:27017"
+
+# docker-compose up -d
 # docker-compose -f ./docker-mongodb.yml up -d

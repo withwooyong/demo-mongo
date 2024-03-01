@@ -3,6 +3,12 @@ server:
 spring:
   data:
     mongodb:
-      database: notice-board
-      host: localhost
-      port: 0
+      uri: mongodb://localhost:27017/mydb
+      #      host: localhost
+      #      port: 27017
+      #      database: mydb
+      #      username: root
+      #      password: 1234
+      test:
+        connectionString: mongodb://localhost:27017/test
+      authentication-database: mydb

@@ -4,22 +4,27 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@Document(collection = "user")
-public class User {
+@Document(collection = "person")
+public class Person {
 
-    @Id
-    private String userId;
-    private String email;
+    private String id;
     private String name;
+    private int age;
+
+    @CreatedDate
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 }
